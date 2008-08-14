@@ -1,0 +1,40 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 8624bcdae55baeef00cd11d5dfcfa60f68710a02 COPYING
+SHA1 1fc79b75f38f58540c53bb34ff24fffddfff0bd1 MANIFEST
+SHA1 0b83d130899e5f89b3e4e2b7ee88f07835b3375e MANIFEST.SKIP
+SHA1 9b956bcf2fd9a8221a8a55e34a1b9cb5ad549782 META.yml
+SHA1 23826b55aed1a88212546d97e3dd870439fa1f51 Makefile.PL
+SHA1 c152c02a04faa03fa7aaa3e011b68cba2eca5b0a README
+SHA1 eb260628bc2082ded62ad9b02eb3184803aa47e4 debian/changelog
+SHA1 1b6453892473a467d07372d45eb05abc2031647a debian/compat
+SHA1 ad04d74195a7063ad10eb9e12dda03269a6a60f5 debian/control
+SHA1 5ed4e38d911bc6e1b11b87a797650a3cb47b0ef7 debian/copyright
+SHA1 b8292e7396d5579ff3b24f8fd6f234360532222c debian/rules
+SHA1 a2455afdb21e7a5cfd217baf38081151aee8d5e2 debian/watch
+SHA1 f0196feae046b76c9366117b518385c84312a04c devel/run.pl
+SHA1 66b7be628439f754069e3fdb9127c4be8436c53a examples/dump.pl
+SHA1 345f199f7879894b2c38eca89894a8ca46d4cb14 lib/Finance/Quote/Hollywood.pm
+SHA1 a4b9857b8a5ac4b2e77703cb9dd6e371f23953c2 t/Hollywood.t
+SHA1 a661a39e55a4127aecb1b97a631c4f01f7dce8c6 t/pod.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iD8DBQFIo4UfLFMCIV9q3ToRAmBmAKCJ5aHd54JVPucf0rtY5F8byJTaEQCeJuIV
+3bhCoiW30911aGSS3ebLw3k=
+=ufcU
+-----END PGP SIGNATURE-----

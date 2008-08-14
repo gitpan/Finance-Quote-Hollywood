@@ -1,0 +1,44 @@
+Copyright 2008 Kevin Ryde
+
+This file is part of Finance-Quote-Hollywood.
+
+Finance-Quote-Hollywood is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 3, or (at
+your option) any later version.
+
+Finance-Quote-Hollywood is distributed in the hope that it will be
+useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with Finance-Quote-Hollywood.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+Finance::Quote::Hollywood extends Finance::Quote to fetch quotes from
+the Hollywood Stock Exchange.  It's mainly intended as a bit of fun,
+so you can see HSX game prices in your favourite Finance::Quote stock
+quotes program.
+
+The prerequisites are
+
+    * Finance::Quote
+    * HTML::TableExtract (which Finance::Quote needs anyway)
+    * Regexp::Common
+    * LWP version 5.814 or higher
+    * Perl version 5.6 or higher
+
+
+The Finance::Quote::Hollywood home page is
+
+    http://www.geocities.com/user42_kevin/finance-quote-hollywood/index.html
+
+The Finance::Quote home page is
+
+    http://finance-quote.sourceforge.net
+
+The Hollywood Stock Exchange home page is
+
+    http://www.hsx.com
