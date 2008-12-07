@@ -19,17 +19,15 @@ use warnings;
 use Carp;
 use Regexp::Common 'whitespace';
 
-our $VERSION = 1;
+our $VERSION = 2;
 
 use constant DEBUG => 0;
 
-use constant {
-  HOLLYWOOD_EXCHANGE_BASE_URL =>
-    'http://movies.hsx.com/servlet/SecurityDetail?symbol=',
+use constant HOLLYWOOD_EXCHANGE_BASE_URL =>
+  'http://movies.hsx.com/servlet/SecurityDetail?symbol=';
 
-  HOLLYWOOD_EXCHANGE_COPYRIGHT_URL =>
-    'http://www.hsx.com/about/terms.htm'
-};
+use constant HOLLYWOOD_EXCHANGE_COPYRIGHT_URL =>
+  'http://www.hsx.com/about/terms.htm';
 
 sub methods {
   return (hollywood => \&hollywood_quotes);
@@ -75,7 +73,7 @@ sub hollywood_quotes {
 
 sub make_url {
   my ($symbol) = @_;
-  return HOLLYWOOD_EXCHANGE_BASE_URL() . $symbol;
+  return HOLLYWOOD_EXCHANGE_BASE_URL() . URI::Escape::uri_escape($symbol);
 }
 
 # store to hashref $quotes for $symbol based on HTTP::Response in $resp
@@ -262,7 +260,7 @@ L<http://movies.hsx.com/servlet/SecurityDetail?symbol=EBANA>
 =back
 
 Both stars stock quotes and movie stock quotes can be fetched, under the
-symbols shown on the pages.
+symbols shown on the pages.  The home page has a symbol search.
 
 The HSX web site is for use under terms described
 

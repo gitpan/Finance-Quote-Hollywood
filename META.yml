@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Finance-Quote-Hollywood
-version:             1
+version:             2
 abstract:            Fetch quotes from the Hollywood Stock Exchange.
 license:             gpl
 author:              

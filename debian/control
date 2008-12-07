@@ -26,7 +26,7 @@ Bugs: mailto:user42@zip.com.au
 
 Package: libfinance-quote-hollywood-perl
 Architecture: all
-Depends: perl (>= 5.6), libfinance-quote-perl, libhtml-tableextract-perl, libregexp-common-perl, libwww-perl (>= 5.814)
+Depends: perl (>= 5.6), libfinance-quote-perl, libhtml-tableextract-perl, libregexp-common-perl, libwww-perl (>= 5.814), ${misc:Depends}
 Description: Download quotes from Hollywood Stock Exchange
  Finance::Quote::Hollywood extends Finance::Quote to download quotes
  from the Hollywood Stock Exchange game.

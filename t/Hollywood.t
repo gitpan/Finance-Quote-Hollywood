@@ -19,22 +19,33 @@
 
 use strict;
 use warnings;
-use Test::More tests => 14;
 use Finance::Quote::Hollywood;
+use Test::More tests => 16;
 
-is (Finance::Quote::Hollywood::fraction_to_decimal('0'), '0.00');
-is (Finance::Quote::Hollywood::fraction_to_decimal('1'), '1.00');
-is (Finance::Quote::Hollywood::fraction_to_decimal('+1'), '1.00');
-is (Finance::Quote::Hollywood::fraction_to_decimal('-1'), '-1.00');
-is (Finance::Quote::Hollywood::fraction_to_decimal('1/2'), '0.50');
-is (Finance::Quote::Hollywood::fraction_to_decimal('+1/2'), '0.50');
-is (Finance::Quote::Hollywood::fraction_to_decimal('-1/2'), '-0.50');
-is (Finance::Quote::Hollywood::fraction_to_decimal('1/4'), '0.25');
-is (Finance::Quote::Hollywood::fraction_to_decimal('+1/4'), '0.25');
-is (Finance::Quote::Hollywood::fraction_to_decimal('-1/4'), '-0.25');
-is (Finance::Quote::Hollywood::fraction_to_decimal('1 3/4'), '1.75');
-is (Finance::Quote::Hollywood::fraction_to_decimal('+1 3/4'), '1.75');
-is (Finance::Quote::Hollywood::fraction_to_decimal('-1 3/4'), '-1.75');
-is (Finance::Quote::Hollywood::fraction_to_decimal('10 3/4'), '10.75');
+ok ($Finance::Quote::Hollywood::VERSION >= 2,
+    'VERSION variable');
+ok (Finance::Quote::Hollywood->VERSION  >= 2,
+    'VERSION method');
+
+foreach my $elem ([ '0',      '0.00'  ],
+                  [ '1',      '1.00'  ],
+                  [ '+1',     '1.00'  ],
+                  [ '-1',     '-1.00' ],
+                  [ '1/2',    '0.50'  ],
+                  [ '+1/2',   '0.50'  ],
+                  [ '-1/2',   '-0.50' ],
+                  [ '1/4',    '0.25'  ],
+                  [ '+1/4',   '0.25'  ],
+                  [ '-1/4',   '-0.25' ],
+                  [ '1 3/4',  '1.75'  ],
+                  [ '+1 3/4', '1.75'  ],
+                  [ '-1 3/4', '-1.75' ],
+                  [ '10 3/4', '10.75' ],
+                 ) {
+  my ($frac, $want) = @$elem;
+  is (Finance::Quote::Hollywood::fraction_to_decimal($frac), $want,
+      "fraction_to_decimal $frac");
+}
+
 
 exit 0;
